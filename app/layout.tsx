@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
@@ -21,6 +22,16 @@ export const metadata: Metadata = {
   },
   description:
     "Constructora con 10 años de trayectoria en obras públicas y privadas en AMBA: infraestructura ferroviaria, instituciones educativas, edificios y obra civil. Pedí tu presupuesto.",
+  keywords: [
+    "constructora Buenos Aires",
+    "obra civil AMBA",
+    "infraestructura ferroviaria",
+    "mantenimiento edilicio",
+    "reformas",
+    "demoliciones",
+    "obra llave en mano",
+  ],
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "es_AR",
@@ -39,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <JsonLd />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
