@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { Nosotros } from "@/components/sections/Nosotros";
 import { Servicios } from "@/components/sections/Servicios";
+import { Obras } from "@/components/sections/Obras";
 import { Clientes } from "@/components/sections/Clientes";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -11,12 +12,7 @@ export default function Home() {
       <Hero />
       <Nosotros />
       <Servicios />
-
-      <Section id="obras" background="gray">
-        <SectionHeading eyebrow="Nuestro trabajo" title="Obras realizadas" />
-        <p className="mt-6 text-sm text-tedfu-dark/50">Contenido en desarrollo.</p>
-      </Section>
-
+      <Obras />
       <Clientes />
 
       <Section id="contacto" background="dark">
