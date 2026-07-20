@@ -120,10 +120,16 @@ export const OBRAS_SEED: Obra[] = [
     titulo: "Playa de estacionamiento Puerto de Buenos Aires",
     categoria: "obra-publica",
     descripcion:
-      "Construcción de playa de estacionamiento en el Puerto de Buenos Aires: pavimentos, señalización, iluminación y obras de drenaje.",
+      "Construcción de playa de estacionamiento en el Puerto de Buenos Aires: preparación de suelos y colocación de adoquines intertrabados de alta resistencia, con señalización y obras de drenaje.",
     cliente: "AGP S.E.",
-    imagenes: ["/multimedia/obra-publica.svg"],
-    destacada: false,
+    imagenes: [
+      "/multimedia/Puerto-de-Buenos-Aires3.jpeg",
+      "/multimedia/Puerto-de-Buenos-Aires1.jpeg",
+      "/multimedia/Puerto-de-Buenos-Aires2.jpeg",
+      "/multimedia/Puerto-de-Buenos-Aires4.jpeg",
+      "/multimedia/Puerto-de-Buenos-Aires5.jpeg",
+    ],
+    destacada: true,
     orden: 11,
   },
   {
@@ -191,5 +197,72 @@ export const OBRAS_SEED: Obra[] = [
     imagenes: ["/multimedia/obra-edificios.svg"],
     destacada: false,
     orden: 17,
+  },
+  {
+    id: "tendido-cables-belgrano-sur",
+    titulo: "Tendido de cables FFCC Belgrano Sur",
+    categoria: "ferroviarias",
+    descripcion:
+      "Zanjeo y tendido de cables a lo largo de la traza del ferrocarril Belgrano Sur: excavación, canalización, hormigonado y tapado, con equipos propios y personal especializado en obra ferroviaria.",
+    cliente: "Línea Belgrano Sur",
+    imagenes: [
+      "/multimedia/Tendido-de-cables-para-el-ferrocarril-belgrano-Sur1.jpeg",
+      "/multimedia/Tendido-de-cables-para-el-ferrocarril-belgrano-Sur2.jpeg",
+      "/multimedia/Tendido-de-cables-para-el-ferrocarril-belgrano-Sur3.jpeg",
+      "/multimedia/Tendido-de-cables-para-el-ferrocarril-belgrano-Sur4.jpeg",
+      "/multimedia/Tendido-de-cables-para-el-ferrocarril-belgrano-Sur5.jpeg",
+      "/multimedia/Tendido-de-cables-para-el-ferrocarril-belgrano-Sur6.jpeg",
+    ],
+    destacada: true,
+    orden: 18,
+  },
+  {
+    id: "centro-cultural-munro",
+    titulo: "Centro Cultural Munro",
+    categoria: "obra-publica",
+    descripcion:
+      "Refacción y puesta en valor del Centro Cultural de Munro: trabajos en altura sobre andamios, reparación de mampostería y hormigón, y renovación integral de los espacios.",
+    cliente: "Municipalidad de Vicente López",
+    imagenes: [
+      "/multimedia/Centro-cultural-Munro1.jpeg",
+      "/multimedia/Centro-cultural-Munro2.jpeg",
+      "/multimedia/Centro-cultural-Munro3.jpeg",
+      "/multimedia/Centro-cultural-Munro4.jpeg",
+      "/multimedia/Centro-cultural-Munro5.jpeg",
+    ],
+    destacada: true,
+    orden: 19,
+  },
+  {
+    id: "obras-exteriores-nordelta",
+    titulo: "Obras exteriores en Nordelta",
+    categoria: "edificios",
+    descripcion:
+      "Obras exteriores en Nordelta: movimiento de suelos, solados y terminaciones junto a canchas deportivas, con equipos compactos para trabajar en espacios reducidos.",
+    cliente: "Privado — Nordelta",
+    imagenes: [
+      "/multimedia/Nordelta1.jpeg",
+      "/multimedia/Nordelta2.jpeg",
+      "/multimedia/Nordelta3.jpeg",
+      "/multimedia/Nordelta4.jpeg",
+    ],
+    destacada: false,
+    orden: 20,
+  },
+  {
+    id: "terminal-puerto-exolgan",
+    titulo: "Terminal de puerto Exolgan",
+    categoria: "obra-publica",
+    descripcion:
+      "Instalaciones subterráneas en la terminal portuaria Exolgan: zanjeo en pavimento existente, tendido de cañerías y cámaras, y reposición de superficies operativas.",
+    cliente: "Exolgan S.A.",
+    imagenes: [
+      "/multimedia/Terminal-de-puerto-Exolgan1.jpeg",
+      "/multimedia/Terminal-de-puerto-Exolgan2.jpeg",
+      "/multimedia/Terminal-de-puerto-Exolgan3.jpeg",
+      "/multimedia/Terminal-de-puerto-Exolgan4.jpeg",
+    ],
+    destacada: false,
+    orden: 21,
   },
 ];

@@ -7,8 +7,8 @@ export function Hero() {
     <section id="inicio" className="relative bg-tedfu-dark text-tedfu-white">
       <div className="absolute inset-0">
         <Image
-          src="/multimedia/hero-obra.svg"
-          alt="Obra en construcción ejecutada por TEDFU S.R.L."
+          src="/multimedia/Tendido-de-cables-para-el-ferrocarril-belgrano-Sur1.jpeg"
+          alt="Equipo de TEDFU trabajando en el tendido de cables del ferrocarril Belgrano Sur"
           fill
           priority
           className="object-cover"
