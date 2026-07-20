@@ -1,0 +1,24 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Obras: lectura pública (la galería del sitio), escritura solo admin logueado
+    match /obras/{obraId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Consultas: cualquiera puede crear (formulario público) pero solo el
+    // admin puede leerlas, actualizarlas o borrarlas
+    match /consultas/{consultaId} {
+      allow create: if request.resource.data.keys().hasAll(
+          ['nombre', 'telefono', 'email', 'tipoObra', 'ubicacion', 'descripcion', 'estado', 'creadoEn']
+        ) && request.resource.data.estado == 'nueva';
+      allow read, update, delete: if request.auth != null;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
