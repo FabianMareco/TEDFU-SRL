@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#2B2B35"/>
+  <g stroke="#4a4a58" stroke-width="2" opacity="0.6">
+    <path d="M0 460 H800"/>
+    <path d="M120 460 V220 H340 V460"/>
+    <path d="M420 460 V300 H660 V460"/>
+    <path d="M160 270 H300 M160 330 H300 M160 390 H300"/>
+    <path d="M460 340 H620 M460 400 H620"/>
+  </g>
+  <path d="M340 220 L340 120 L520 120" stroke="#F0A030" stroke-width="5" fill="none" opacity="0.9"/>
+  <circle cx="520" cy="120" r="8" fill="#F0A030"/>
+  <rect y="460" width="800" height="140" fill="#232329"/>
+  <text x="400" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#9a9aa8">Institución educativa</text>
+</svg>
