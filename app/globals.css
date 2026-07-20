@@ -1,29 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --color-tedfu-dark: #2b2b35;
-  --color-tedfu-dark-light: #3a3a46;
-  --color-tedfu-orange: #f0a030;
-  --color-tedfu-orange-dark: #d6871a;
-  --color-tedfu-white: #ffffff;
-  --color-tedfu-gray: #f5f5f5;
+  /* Tokens "Ingeniería Corporativa" — derivados de la marca heredada */
+  --color-carbon: #2b2b35; /* base oscura (marca) */
+  --color-carbon-deep: #232329;
+  --color-acero: #4a4e58; /* gris acero: bordes, texto técnico */
+  --color-hormigon: #e9e8e4; /* fondo claro cálido */
+  --color-marfil: #fafaf8; /* blanco técnico */
+  --color-senal: #f0a030; /* naranja obra (marca) — acento <5% */
+  --color-senal-dark: #d6871a;
 
-  --background: var(--color-tedfu-white);
-  --foreground: var(--color-tedfu-dark);
+  --background: var(--color-marfil);
+  --foreground: var(--color-carbon);
+
+  --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme inline {
-  --color-tedfu-dark: var(--color-tedfu-dark);
-  --color-tedfu-dark-light: var(--color-tedfu-dark-light);
-  --color-tedfu-orange: var(--color-tedfu-orange);
-  --color-tedfu-orange-dark: var(--color-tedfu-orange-dark);
-  --color-tedfu-white: var(--color-tedfu-white);
-  --color-tedfu-gray: var(--color-tedfu-gray);
+  /* Alias heredados (mantienen los componentes existentes) */
+  --color-tedfu-dark: var(--color-carbon);
+  --color-tedfu-dark-light: var(--color-carbon-deep);
+  --color-tedfu-orange: var(--color-senal);
+  --color-tedfu-orange-dark: var(--color-senal-dark);
+  --color-tedfu-white: var(--color-marfil);
+  --color-tedfu-gray: var(--color-hormigon);
+  --color-tedfu-acero: var(--color-acero);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-chivo);
+  --font-display: var(--font-barlow);
+  --font-mono: var(--font-plex-mono);
 }
 
 body {
@@ -36,7 +44,59 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Compensate anchor scroll for the sticky header */
+/* Compensa el scroll de anclas por el header sticky */
 section[id] {
   scroll-margin-top: 5rem;
+}
+
+/* ---- Firma visual: grilla tipo plano técnico (solo secciones oscuras) ---- */
+.blueprint-grid {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(250, 250, 248, 0.05) 0,
+      rgba(250, 250, 248, 0.05) 1px,
+      transparent 1px,
+      transparent 56px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(250, 250, 248, 0.05) 0,
+      rgba(250, 250, 248, 0.05) 1px,
+      transparent 1px,
+      transparent 56px
+    );
+}
+
+/* ---- Motion ---- */
+@media (prefers-reduced-motion: no-preference) {
+  /* Secuencia orquestada de carga del hero */
+  .hero-seq {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: hero-in 0.7s var(--ease-expo-out) forwards;
+    animation-delay: var(--seq-delay, 0ms);
+  }
+
+  @keyframes hero-in {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* Scroll-reveal (solo cards de obras y métricas) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.6s var(--ease-expo-out),
+      transform 0.6s var(--ease-expo-out);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 }

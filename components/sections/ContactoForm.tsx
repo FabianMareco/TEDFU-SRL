@@ -47,7 +47,7 @@ function validar(datos: DatosConsulta): Errores {
 }
 
 const inputStyles =
-  "w-full rounded-md border border-tedfu-white/20 bg-tedfu-white/5 px-4 py-3 text-sm text-tedfu-white placeholder:text-tedfu-white/40 focus:border-tedfu-orange focus:outline-none focus:ring-1 focus:ring-tedfu-orange";
+  "w-full rounded-sm border border-tedfu-white/20 bg-tedfu-white/5 px-4 py-3 text-sm text-tedfu-white placeholder:text-tedfu-white/40 focus:border-tedfu-orange focus:outline-none focus:ring-1 focus:ring-tedfu-orange";
 
 const inputErrorStyles = "border-red-400 focus:border-red-400 focus:ring-red-400";
 

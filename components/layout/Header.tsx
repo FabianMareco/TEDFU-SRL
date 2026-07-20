@@ -32,12 +32,12 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav className="hidden lg:flex lg:items-center lg:gap-8">
+        <nav className="hidden lg:flex lg:items-center lg:gap-7">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-tedfu-white/90 transition-colors hover:text-tedfu-orange"
+              className="font-mono text-xs uppercase tracking-[0.15em] text-tedfu-white/80 transition-colors hover:text-tedfu-orange"
             >
               {link.label}
             </Link>

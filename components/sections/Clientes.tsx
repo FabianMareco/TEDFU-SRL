@@ -12,11 +12,11 @@ export function Clientes() {
         align="center"
       />
 
-      <ul className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+      <ul className="mt-12 grid grid-cols-2 border-l border-t border-tedfu-dark/15 sm:grid-cols-3 lg:grid-cols-5">
         {CLIENTES.map((cliente) => (
           <li
             key={cliente}
-            className="flex min-h-20 items-center justify-center rounded-lg border border-tedfu-dark/10 bg-tedfu-gray px-4 py-5 text-center text-sm font-semibold text-tedfu-dark/80"
+            className="flex min-h-24 items-center justify-center border-b border-r border-tedfu-dark/15 px-4 py-6 text-center font-display text-lg font-bold uppercase tracking-wide text-tedfu-dark/40 transition-colors hover:text-tedfu-dark"
           >
             {cliente}
           </li>

@@ -108,7 +108,7 @@ export function ObraModal({ obra, onClose }: { obra: Obra; onClose: () => void }
           <p className="text-xs font-semibold uppercase tracking-wide text-tedfu-orange">
             {CATEGORIA_LABELS[obra.categoria]}
           </p>
-          <h3 className="mt-1 text-xl font-bold text-tedfu-dark">{obra.titulo}</h3>
+          <h3 className="mt-1 font-display text-3xl font-bold uppercase leading-none tracking-wide text-tedfu-dark">{obra.titulo}</h3>
           <dl className="mt-3 text-sm">
             <div className="flex gap-2">
               <dt className="font-semibold text-tedfu-dark">Cliente:</dt>
